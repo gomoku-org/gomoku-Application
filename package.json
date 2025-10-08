@@ -13,9 +13,10 @@
     "test": "vitest"
   },
   "dependencies": {
-    "frk24s-components": "file:../frk24s-components",
+    "gomoku-component": "github:gomoku-org/gomoku-component#4e06f95ff6cbf46196ff2c56f7f8582804cb7890",
     "prop-types": "^15.8.1",
     "react": "^19.1.1",
+    "react-confetti": "^6.4.0",
     "react-dom": "^19.1.1",
     "react-router-dom": "^7.9.2"
   },

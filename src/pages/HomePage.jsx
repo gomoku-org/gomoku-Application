@@ -1,38 +1,28 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; 
-import Header from "../components/Header/Header";
-import ReglerButton from "../components/ReglerButton/ReglerButton";
-import StartButton from "../components/StartButton/StartButton";
-
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { Header, ReglerButton, StartButton } from "gomoku-component";
 import styles from "./HomePage.module.css";
 
-
 const HomePage = () => {
-   const navigate = useNavigate();
-  const [piece, setPiece] = useState(null);
+  const navigate = useNavigate();
 
- const handleStart = () => {
-    
+  const handleStart = () => {
     navigate("/setup");
   };
-
 
   return (
     <div>
       <Header />
-      {/* Container för knappar */}
-        <div className={styles.buttonContainer}>
-          <StartButton onStart={handleStart} StartButtonText="Starta spelet" />
-          <ReglerButton buttonLabel="Regler" />
-        </div>
-        
-        
+
+      <div className={styles.buttonContainer}>
+        <StartButton
+          StartButtonText="Starta spelet"
+          onStart={() => { console.log("Start klick!"); handleStart(); }}
+        />
+        <ReglerButton buttonLabel="Regler" />
+      </div>
     </div>
   );
 };
 
 export default HomePage;
-
-
-
-

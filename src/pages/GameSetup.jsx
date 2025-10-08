@@ -2,8 +2,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useGame } from "../context/GameContext";
-import InputField from "../components/InputField/InputField";
-import ChoosePiece from "../components/ChoosePiece";
+import { InputField, ChoosePiece } from "gomoku-component";
 import { useApi } from "../api/useApi";
 import styles from "./GameSetup.module.css";
 

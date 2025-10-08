@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useApi } from "../api/useApi";
-import { useGame } from "../context/GameContext";
-import Board from "../components/Board/Board";
+import { useGame } from "gomoku-app/context";
+import { Board } from "gomoku-component";
 
 export default function GamePage() {
   const { getGameById } = useApi();
@@ -31,7 +31,7 @@ export default function GamePage() {
 
   if (loading) return <p>Laddar spel...</p>;
   if (!game) return null;
-
+  
   return (
     <div>
       <Board />
